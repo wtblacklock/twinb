@@ -44,7 +44,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Section className="pt-56 pb-16">
+      <Section className="pt-48 md:pt-[267px] pb-16">
         <div className="max-w-4xl">
           <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8">
             Contact

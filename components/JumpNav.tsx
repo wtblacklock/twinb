@@ -56,7 +56,7 @@ export function JumpNav({ sections }: JumpNavProps) {
     <>
       <Section className="pt-0 pb-8 md:pb-10">
         <div className="hidden md:block sticky top-[104px] z-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 border-y border-border bg-background/85 backdrop-blur-sm py-5">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:border-y lg:border-border bg-background/85 backdrop-blur-sm py-5">
             <div className="md:col-span-3">
               <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground">Jump to</p>
             </div>
@@ -79,7 +79,7 @@ export function JumpNav({ sections }: JumpNavProps) {
               className="inline-flex items-center rounded-md border border-border bg-background px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Jump to section"
             >
-              Jump to
+              Jump to service
             </button>
           </div>
         </div>

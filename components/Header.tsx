@@ -65,8 +65,8 @@ export function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-transparent",
-          isScrolled ? "bg-background/90 backdrop-blur-md border-border py-4" : "bg-transparent py-6"
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-background/90 backdrop-blur-md",
+          isScrolled ? "border-b border-border py-4" : "py-6"
         )}
       >
         <div className="container mx-auto px-6 max-w-[1280px] flex items-center justify-between">
@@ -76,7 +76,12 @@ export function Header() {
               alt="TwinB"
               width={118}
               height={118}
-              className="h-[118px] w-[118px] object-contain"
+              className={cn(
+                "object-contain transition-all duration-300",
+                isScrolled
+                  ? "h-[71px] w-[71px] md:h-[118px] md:w-[118px]"
+                  : "h-[118px] w-[118px]"
+              )}
               priority
             />
           </Link>

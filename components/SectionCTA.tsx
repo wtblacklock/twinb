@@ -27,11 +27,11 @@ export function SectionCTA({ onOpen, className }: SectionCTAProps) {
         </button>
       </div>
 
-      <div className="md:hidden fixed left-0 right-0 bottom-4 z-40 flex justify-center pointer-events-none">
+      <div className="md:hidden fixed left-0 right-0 bottom-0 z-40 bg-black px-6 py-4">
         <button
           type="button"
           onClick={(event) => onOpen(event.currentTarget)}
-          className="pointer-events-auto px-6 py-3 border border-border bg-background text-foreground rounded-lg text-sm font-medium hover:bg-foreground hover:text-background transition-colors"
+          className="w-full py-4 bg-white text-black rounded-lg text-base font-medium hover:bg-white/90 transition-colors"
         >
           Talk to us about this
         </button>

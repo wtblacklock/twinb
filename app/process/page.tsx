@@ -4,7 +4,7 @@ import { CTA } from "@/components/CTA";
 export default function ProcessPage() {
   return (
     <>
-      <Section className="pt-56 pb-16">
+      <Section className="pt-48 md:pt-[267px] pb-16">
         <div className="max-w-4xl">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             Our Methodology

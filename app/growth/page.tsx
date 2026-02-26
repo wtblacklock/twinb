@@ -88,7 +88,7 @@ export default function GrowthPage() {
 
   return (
     <>
-      <Section id="top" className="pt-56 pb-16">
+      <Section id="top" className="pt-48 md:pt-[267px] pb-16">
         <div className="max-w-4xl">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             Growth Engineering
@@ -127,7 +127,7 @@ export default function GrowthPage() {
 
       <div className="bg-background">
         {navConfig.growthAnchors.map((anchor, index) => (
-          <Section key={anchor.id} id={anchor.id} className="py-20 md:py-24 border-b border-border last:border-0">
+          <Section key={anchor.id} id={anchor.id} className="py-20 md:py-24 md:border-b md:border-border last:border-0">
             <div className="group/offering grid grid-cols-1 md:grid-cols-12 gap-12">
               <div className="md:col-span-4">
                 <span className="font-mono text-xs text-muted-foreground block mb-2">0{index + 1}</span>
