@@ -10,7 +10,7 @@ export default function AboutPage() {
 
   return (
     <>
-      <Section className="pt-48 md:pt-[267px] pb-20">
+      <Section className="pt-48 md:pt-[417px] pb-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-3">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">About</p>

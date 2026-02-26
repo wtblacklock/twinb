@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-48 md:pt-[267px] pb-24 min-h-[80vh] flex flex-col justify-center">
+      <Section className="pt-48 md:pt-[417px] pb-24 min-h-[80vh] flex flex-col justify-center">
         <div className="relative isolate w-full min-h-[80vh] flex items-center">
           <div ref={heroContainerRef} className="absolute inset-0">
             <MastheadLines containerRef={heroContainerRef} />

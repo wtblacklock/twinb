@@ -10,7 +10,7 @@ export default function WorkDetailPage({ params }: { params: { slug: string } })
 
   return (
     <>
-      <Section className="pt-48 md:pt-[267px] pb-16">
+      <Section className="pt-48 md:pt-[417px] pb-16">
         <Link href="/work" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-8 transition-colors">
           <ArrowLeft className="mr-2 w-4 h-4" /> Back to Work
         </Link>
