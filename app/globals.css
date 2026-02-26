@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Near-white background (Neutral/Warm) */
+  --background: #F9F9F8; 
+  /* Deep charcoal text */
+  --foreground: #1A1A1A;
+  
+  /* Muted accent (e.g., a desaturated clay/terracotta or deep olive) */
+  --accent: #D4C5B8;
+  --accent-foreground: #1A1A1A;
+
+  /* Muted secondary text */
+  --muted: #F2F0EE;
+  --muted-foreground: #666666;
+
+  /* Subtle borders */
+  --border: #E6E4E2;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Optional dark mode override if needed, but sticking to the requested light editorial feel for now */
+  /* keeping it light-themed as per "gallery/editorial" brief usually implies light, 
+     but if dark mode is requested later, we can add it. 
+     The brief asked for "Background: near-white", so we enforce light mode variables mostly. */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 108px; /* Offset for sticky header */
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 92px;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D1D1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A1A1A1;
+}
+
+/* Utility for hiding scrollbar but allowing scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
