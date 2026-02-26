@@ -44,7 +44,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <Section className="pt-48 md:pt-[417px] pb-16">
+      <Section className="pt-48 md:pt-[150px] lg:pt-[160px] pb-16">
         <div className="max-w-4xl">
           <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8">
             Contact
@@ -113,7 +113,12 @@ export default function ContactPage() {
                   name="topic"
                   required
                   defaultValue=""
-                  className="w-full p-4 bg-background border border-border focus:border-foreground outline-none transition-colors"
+                  className="w-full p-4 pr-12 bg-background border border-border focus:border-foreground outline-none transition-colors appearance-none"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%231a1a1a' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 16px center',
+                  }}
                 >
                   <option value="" disabled>
                     Select one

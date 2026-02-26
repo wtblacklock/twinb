@@ -88,7 +88,7 @@ export default function ProductPage() {
 
   return (
     <>
-      <Section id="top" className="pt-48 md:pt-[417px] pb-16">
+      <Section id="top" className="pt-48 md:pt-[150px] lg:pt-[160px] pb-16">
         <div className="max-w-4xl">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             Product Engineering

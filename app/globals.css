@@ -69,3 +69,8 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Hide mobile SectionCTA button when mobile menu is open */
+body[data-mobile-menu="open"] .section-cta-mobile {
+  display: none !important;
+}

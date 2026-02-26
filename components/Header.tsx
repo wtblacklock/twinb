@@ -19,6 +19,12 @@ export function Header() {
   const dialog = useDialog();
 
   useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.body.setAttribute("data-mobile-menu", mobileMenuOpen ? "open" : "closed");
+    }
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };

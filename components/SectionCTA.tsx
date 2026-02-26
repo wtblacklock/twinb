@@ -27,7 +27,7 @@ export function SectionCTA({ onOpen, className }: SectionCTAProps) {
         </button>
       </div>
 
-      <div className="md:hidden fixed left-0 right-0 bottom-0 z-40 bg-black px-6 py-4">
+      <div className="md:hidden fixed left-0 right-0 bottom-0 z-40 bg-black px-6 py-4 section-cta-mobile">
         <button
           type="button"
           onClick={(event) => onOpen(event.currentTarget)}

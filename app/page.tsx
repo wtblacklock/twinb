@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-48 md:pt-[417px] pb-24 min-h-[80vh] flex flex-col justify-center">
+      <Section className="pt-48 md:pt-[150px] lg:pt-[160px] pb-24 min-h-[80vh] flex flex-col justify-center">
         <div className="relative isolate w-full min-h-[80vh] flex items-center">
           <div ref={heroContainerRef} className="absolute inset-0">
             <MastheadLines containerRef={heroContainerRef} />
@@ -72,6 +72,7 @@ export default function Home() {
             <div className="md:col-span-8 space-y-8">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-editorial">
                 You used AI tools. You got a prototype live. It kind of works.
+                <br />
                 <br />
                 Now the questions start.
               </p>
