@@ -93,7 +93,7 @@ export default function GrowthPage() {
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             Growth Engineering
           </span>
-          <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8">
+          <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8 lg:max-w-[80%]">
             Data-driven loops that compound.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
@@ -213,7 +213,11 @@ export default function GrowthPage() {
         </div>
       </Section>
 
-      <CTA title="Ignite growth." description="Build the systems that make scaling inevitable." />
+      <CTA 
+        title="Ignite growth." 
+        description="Build the systems that make scaling inevitable." 
+        onOpen={(trigger) => openPanel("general", "Product Review", trigger)}
+      />
 
       <ServicePanel
         isOpen={dialog.isOpen}

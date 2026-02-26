@@ -76,7 +76,7 @@ export function JumpNav({ sections }: JumpNavProps) {
             <button
               type="button"
               onClick={(event) => sheetDialog.open(event.currentTarget)}
-              className="inline-flex items-center rounded-md border border-border bg-background px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center rounded-md border border-border bg-background px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
               aria-label="Jump to section"
             >
               Jump to service
@@ -130,7 +130,7 @@ export function JumpNav({ sections }: JumpNavProps) {
                     key={section.id}
                     type="button"
                     onClick={() => handleSelectSection(section.id)}
-                    className="w-full border border-border px-4 py-4 text-left text-base rounded-md hover:bg-muted/30 transition-colors"
+                    className="w-full border border-border px-4 py-4 text-left text-base rounded-md hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
                   >
                     {section.label}
                   </button>

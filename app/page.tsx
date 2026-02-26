@@ -40,13 +40,13 @@ export default function Home() {
               <button
                 type="button"
                 onClick={(event) => dialog.open(event.currentTarget)}
-                className="px-8 py-4 bg-foreground text-background font-medium rounded-lg hover:bg-foreground/90 transition-colors"
+                className="px-8 py-4 bg-foreground text-background font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
               >
                 Request a Product Review
               </button>
               <Link 
                 href="/work" 
-                className="px-8 py-4 border border-border font-medium rounded-lg hover:bg-muted/10 transition-colors"
+                className="px-8 py-4 border border-border font-medium rounded-lg hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
               >
                 See our work
               </Link>
@@ -102,7 +102,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={(event) => dialog.open(event.currentTarget)}
-                  className="px-6 py-3 border border-border text-sm font-medium rounded-md hover:bg-muted/20 transition-colors"
+                  className="px-6 py-3 border border-border text-sm font-medium rounded-md hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
                 >
                   Request a Product Review
                 </button>

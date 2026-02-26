@@ -17,7 +17,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-9">
             <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight">
-              About TwinB
+              Where scale begins
             </h1>
           </div>
         </div>
@@ -41,7 +41,6 @@ export default function AboutPage() {
                   <br />
                   <br />
                   It is hard to make it durable, adopted, and commercially viable.
-                  <br />
                   <br />
                 </p>
                 <p>
@@ -72,7 +71,7 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-9">
             <blockquote
-              className="leading-[0.82] tracking-tight-editorial font-medium max-w-none"
+              className="leading-[1.15] tracking-tight-editorial font-medium max-w-none"
               style={{ fontSize: "clamp(1.8rem, 3.2vw, 3.8rem)" }}
             >
               <span className="block">Speed got you here.</span>
@@ -87,8 +86,8 @@ export default function AboutPage() {
           <div className="md:col-span-3">
             <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">Team</p>
           </div>
-          <div className="md:col-span-9 grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <article className="lg:col-span-5 border border-border p-8">
+          <div className="md:col-span-9 grid grid-cols-1 gap-8">
+            <article className="border border-border p-8">
               <h3 className="text-2xl md:text-3xl font-medium mb-6">Jackson Blacklock</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 Jackson is a scale strategist with a background in business operations, systems thinking, and
@@ -104,7 +103,7 @@ export default function AboutPage() {
               </p>
             </article>
 
-            <article className="lg:col-span-7 border border-border p-8 md:p-10">
+            <article className="border border-border p-8 md:p-10">
               <h3 className="text-2xl md:text-3xl font-medium mb-6">William Blacklock</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
                 William is a product and brand operator with deep experience across design, product strategy, and
@@ -160,7 +159,7 @@ export default function AboutPage() {
       <Section className="py-20 border-t border-border">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
-            <h2 className="text-[clamp(2rem,3.2vw,3.4rem)] leading-tight-editorial font-medium">
+            <h2 className="text-[clamp(2rem,3.2vw,3.4rem)] leading-tight-editorial font-medium lg:max-w-[80%]">
               Want a clear plan for what you built?
             </h2>
           </div>
@@ -168,13 +167,13 @@ export default function AboutPage() {
             <button
               type="button"
               onClick={(event) => dialog.open(event.currentTarget)}
-              className="px-6 py-3 bg-foreground text-background text-sm font-medium rounded-md hover:bg-foreground/90 transition-colors"
+              className="px-6 py-3 bg-foreground text-background text-sm font-medium rounded-md hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
             >
               Request a Product Review
             </button>
             <Link
               href="/contact"
-              className="px-6 py-3 border border-border text-sm font-medium rounded-md hover:bg-muted/20 transition-colors text-center"
+              className="px-6 py-3 border border-border text-sm font-medium rounded-md hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200 text-center"
             >
               Contact
             </Link>

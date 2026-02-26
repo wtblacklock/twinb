@@ -349,7 +349,7 @@ export function ServicePanel({
                   <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full md:w-auto px-7 py-3 bg-foreground text-background font-medium rounded-md transition-colors hover:bg-foreground/90 disabled:opacity-50"
+                    className="w-full md:w-auto px-7 py-3 bg-foreground text-background font-medium rounded-md hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {status === "loading" ? "Sending..." : variant === "productReview" ? "Send request" : "Send message"}
                   </button>

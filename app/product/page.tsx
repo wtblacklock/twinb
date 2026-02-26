@@ -93,7 +93,7 @@ export default function ProductPage() {
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             Product Engineering
           </span>
-          <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8">
+          <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8 lg:max-w-[90%]">
             From technical debt to technical asset.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
@@ -224,7 +224,11 @@ export default function ProductPage() {
         </div>
       </Section>
 
-      <CTA title="Fix the foundation." description="Stop building on quicksand. Let's stabilize your product." />
+      <CTA 
+        title="Fix the foundation." 
+        description="Stop building on quicksand. Let's stabilize your product." 
+        onOpen={(trigger) => openPanel("general", "Product Review", trigger)}
+      />
 
       <ServicePanel
         isOpen={dialog.isOpen}

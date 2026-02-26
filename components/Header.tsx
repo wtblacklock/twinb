@@ -173,7 +173,7 @@ export function Header() {
             <button
               type="button"
               onClick={(event) => dialog.open(event.currentTarget)}
-              className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-foreground/90 transition-colors"
+              className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
             >
               Request a Product Review
             </button>
@@ -267,7 +267,7 @@ export function Header() {
               <div className="pt-4">
                 <button
                   type="button"
-                  className="block w-full text-center py-4 bg-foreground text-background text-lg font-medium rounded-lg"
+                  className="block w-full text-center py-4 bg-foreground text-background text-lg font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
                   onClick={(event) => {
                     setMobileMenuOpen(false);
                     dialog.open(event.currentTarget);

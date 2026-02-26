@@ -56,7 +56,7 @@ export function EmailFallback({
           <button
             type="button"
             onClick={handleCopy}
-            className="text-xs border border-border px-2 py-1 rounded-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-xs border border-border px-2 py-1 rounded-sm text-muted-foreground hover:text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-200"
           >
             {copyState === "copied" ? "Copied" : copyState === "error" ? "Try again" : "Copy"}
           </button>

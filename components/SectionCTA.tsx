@@ -21,7 +21,7 @@ export function SectionCTA({ onOpen, className }: SectionCTAProps) {
         <button
           type="button"
           onClick={(event) => onOpen(event.currentTarget)}
-          className="px-6 py-3 border border-border bg-background text-foreground rounded-lg text-sm font-medium hover:bg-foreground hover:text-background transition-colors"
+          className="px-6 py-3 border border-border bg-background text-foreground rounded-lg text-sm font-medium hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
         >
           Talk to us about this
         </button>
@@ -31,7 +31,7 @@ export function SectionCTA({ onOpen, className }: SectionCTAProps) {
         <button
           type="button"
           onClick={(event) => onOpen(event.currentTarget)}
-          className="w-full py-4 bg-white text-black rounded-lg text-base font-medium hover:bg-white/90 transition-colors"
+          className="w-full py-4 bg-white text-black rounded-lg text-base font-medium hover:bg-gray-200 active:bg-gray-300 transition-all duration-200"
         >
           Talk to us about this
         </button>

@@ -49,10 +49,10 @@ export default function WorkPage() {
                 key={option}
                 type="button"
                 onClick={() => setActiveFilter(option)}
-                className={`rounded-lg px-5 py-2 text-sm transition-colors ${
+                className={`rounded-lg px-5 py-2 text-sm transition-all duration-200 ${
                   isActive
-                    ? "bg-foreground text-background"
-                    : "border border-border text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                    ? "bg-foreground text-background hover:bg-[#333333] active:bg-[#1a1a1a]"
+                    : "border border-border text-muted-foreground hover:text-foreground hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background"
                 }`}
               >
                 {option}
