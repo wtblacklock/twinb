@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { CTA } from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: "Our Process",
+  description: "A systematic five-step approach to fixing and scaling products: audit, roadmap, stabilize, scale, and handover.",
+};
 
 export default function ProcessPage() {
   return (

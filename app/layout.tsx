@@ -18,7 +18,11 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TwinB | Product & Growth Engineering",
+  metadataBase: new URL("https://twinb.me"),
+  title: {
+    default: "TwinB | Product & Growth Engineering",
+    template: "%s | TwinB",
+  },
   description: "We turn fast built products into scalable systems. Product & Growth Engineering practice.",
 };
 
