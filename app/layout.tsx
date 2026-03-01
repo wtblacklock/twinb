@@ -20,10 +20,10 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://twinb.me"),
   title: {
-    default: "TwinB | Product & Growth Engineering",
+    default: "TwinB | AI Engineering & Transformation",
     template: "%s | TwinB",
   },
-  description: "We turn fast built products into scalable systems. Product & Growth Engineering practice.",
+  description: "Outcome-based AI engineering and transformation for companies ready to compete on intelligence.",
 };
 
 export default function RootLayout({

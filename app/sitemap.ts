@@ -7,8 +7,8 @@ const BASE_URL = "https://twinb.me";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, priority: 1.0, changeFrequency: "monthly" },
-    { url: `${BASE_URL}/product`, priority: 0.9, changeFrequency: "monthly" },
-    { url: `${BASE_URL}/growth`, priority: 0.9, changeFrequency: "monthly" },
+    { url: `${BASE_URL}/ai-engineering`, priority: 0.9, changeFrequency: "monthly" },
+    { url: `${BASE_URL}/ai-transformation`, priority: 0.9, changeFrequency: "monthly" },
     { url: `${BASE_URL}/work`, priority: 0.8, changeFrequency: "monthly" },
     { url: `${BASE_URL}/process`, priority: 0.7, changeFrequency: "monthly" },
     { url: `${BASE_URL}/insights`, priority: 0.7, changeFrequency: "weekly" },

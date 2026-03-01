@@ -4,7 +4,7 @@ import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
   title: "Our Process",
-  description: "A systematic five-step approach to fixing and scaling products: audit, roadmap, stabilize, scale, and handover.",
+  description: "A systematic five-step approach to AI engineering and transformation: discover, strategize, build, enable, and optimize.",
 };
 
 export default function ProcessPage() {
@@ -16,10 +16,10 @@ export default function ProcessPage() {
             Our Methodology
           </span>
           <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8 lg:max-w-[80%]">
-            Fix and scale what you built.
+            From AI-scattered to AI-native.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            We don&apos;t just throw code at the problem. We use a systematic process to identify bottlenecks, stabilize the foundation, and build for growth.
+            We don&apos;t just advise. We discover, strategize, build, train, and optimize — then measure the ROI at every step.
           </p>
         </div>
       </Section>
@@ -28,35 +28,35 @@ export default function ProcessPage() {
         {[
           {
             step: "01",
-            title: "Reality Check",
-            desc: "We evaluate the current product state, architecture integrity, positioning clarity, and growth friction. Then we define what should be fixed, removed, or rebuilt.",
-            artifacts: ["State Assessment", "Risk Map", "Decision Brief"]
+            title: "Discover & Audit",
+            desc: "We map your workflows, survey your team, and surface your highest-ROI AI use cases through stakeholder interviews and data analysis. The output is a clear picture of where AI creates the most value.",
+            artifacts: ["AI-Adoption Assessment", "Use-Case Discovery", "ROI Quantification"]
           },
           {
             step: "02",
-            title: "Direction & Roadmap",
-            desc: "We set direction and sequence the work. We decide what to stabilize first, what to defer, and where focused investment will create the most progress.",
-            artifacts: ["Prioritized Backlog", "30 to 60 Day Plan", "Delivery Sequence"]
+            title: "Strategy & Roadmap",
+            desc: "We define the sequenced plan: what to build, what to automate, what to defer — with clear milestones, dependencies, and ROI targets. No 200-slide decks. A focused implementation roadmap backed by a technical appendix.",
+            artifacts: ["AI-Adoption Report", "90-Day Plan", "Dependency Mapping"]
           },
           {
             step: "03",
-            title: "Stabilize",
-            desc: "We fix the foundation and reduce operational drag. We address critical technical debt, improve reliability, and make shipping predictable again.",
-            artifacts: ["Refactored Core", "Reliability Improvements", "Release Safeguards"]
+            title: "Build & Deploy",
+            desc: "Our AI engineering pods ship production-grade features, automations, and models on two-week sprints. Outcome-based pricing means you pay for features delivered, not hours logged.",
+            artifacts: ["Production-Ready Code", "Documentation & Runbooks", "Evaluation Suite"]
           },
           {
             step: "04",
-            title: "Scale & Grow",
-            desc: "We implement the systems required for steady growth. That includes performance hardening, instrumentation, and the loops that convert traffic into usage.",
-            artifacts: ["Growth Systems", "Performance Plan", "Measurement Framework"]
+            title: "Enable & Train",
+            desc: "We upskill your team with bespoke curricula, hands-on workshops, and AI-first culture programs that sustain the transformation beyond our engagement.",
+            artifacts: ["Custom Curricula", "Hands-On Workshops", "Training Documentation"]
           },
           {
             step: "05",
-            title: "Handover",
-            desc: "We transfer ownership with clear documentation and practical training so your team can maintain momentum without dependency.",
-            artifacts: ["Documentation", "Runbooks", "Team Enablement"]
+            title: "Measure & Optimize",
+            desc: "We track adoption, ROI, and model performance — then iterate. AI transformation is a continuous program, not a one-time project.",
+            artifacts: ["ROI Dashboard", "Optimization Roadmap", "Ongoing Advisory"]
           }
-        ].map((item, index) => (
+        ].map((item) => (
           <Section key={item.step} className="py-20 border-t border-border">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div className="md:col-span-3">
@@ -84,7 +84,7 @@ export default function ProcessPage() {
         ))}
       </div>
 
-      <CTA title="Let's get to work." />
+      <CTA title="Let's architect your AI future." />
     </>
   );
 }

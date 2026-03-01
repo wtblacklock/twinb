@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "TwinB | Product & Growth Engineering";
+export const alt = "TwinB | AI Engineering & Transformation";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,7 +43,7 @@ export default function Image() {
               margin: 0,
             }}
           >
-            Product &amp; Growth Engineering
+            AI Engineering &amp; Transformation
           </p>
           <h1
             style={{
@@ -56,7 +56,7 @@ export default function Image() {
               maxWidth: 900,
             }}
           >
-            We turn fast built products into scalable systems.
+            From AI-absent to AI-native.
           </h1>
         </div>
 

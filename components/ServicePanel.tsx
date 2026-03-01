@@ -12,25 +12,25 @@ type ServiceOptionGroup = {
 
 const serviceGroups: ServiceOptionGroup[] = [
   {
-    title: "Product Engineering",
+    title: "AI Engineering",
     options: [
-      "Architecture & Refactoring",
-      "Scale & Performance",
-      "Security & Reliability",
-      "Integrations & Infrastructure",
-      "Observability & Analytics",
-      "Technical Roadmap & Delivery",
+      "Application Development",
+      "Fine-Tuning & Model Work",
+      "Code Migration & Refactors",
+      "Data Engineering & Analysis",
+      "Custom Agentic Solutions",
+      "Outcome-Based Delivery",
     ],
   },
   {
-    title: "Growth Engineering",
+    title: "AI Transformation",
     options: [
-      "Positioning & Narrative",
-      "Activation & Adoption",
-      "Conversion Systems",
-      "Lifecycle & Retention",
-      "Automation & Ops",
-      "Brand Systems & Assets",
+      "AI Strategy",
+      "Product Transformation",
+      "Process Transformation",
+      "People & Training",
+      "AI Tooling",
+      "Implementation Roadmap",
     ],
   },
 ];

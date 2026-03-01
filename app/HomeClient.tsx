@@ -28,13 +28,13 @@ export default function HomeClient() {
           </div>
           <div className="relative z-10 max-w-4xl">
             <p className="mb-8 text-sm font-mono text-muted-foreground uppercase tracking-wider">
-              We fix and scale what you built.
+              AI Engineering & Transformation
             </p>
             <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8">
-              We turn fast built products into scalable systems.
+              Build AI-native. Win the next decade.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed mb-12">
-              Product & Growth Engineering for teams that shipped fast and now need durability, adoption, and scale.
+              Outcome-based AI engineering and transformation for companies ready to compete on intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
               <button
@@ -42,7 +42,7 @@ export default function HomeClient() {
                 onClick={(event) => dialog.open(event.currentTarget)}
                 className="px-8 py-4 bg-foreground text-background font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
               >
-                Request a Product Review
+                Start a Conversation
               </button>
               <Link
                 href="/work"
@@ -60,30 +60,32 @@ export default function HomeClient() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
             <div className="md:col-span-4 md:pr-8">
               <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground mb-6">
-                Post-prototype state
+                The AI moment
               </p>
               <h2 className="text-[clamp(2.2rem,4vw,4.5rem)] leading-[0.95] tracking-tight-editorial font-medium">
-                Built something.
+                Everyone&apos;s
                 <br />
-                Now stuck.
+                experimenting.
+                <br />
+                No one&apos;s shipping.
               </h2>
             </div>
 
             <div className="md:col-span-8 space-y-8">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-editorial">
-                You used AI tools. You got a prototype live. It kind of works.
+                Your team is running AI pilots. You have ChatGPT subscriptions everywhere.
                 <br />
                 <br />
-                Now the questions start.
+                But nothing has reached production.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
-                  "Is the architecture viable?",
-                  "Should you rewrite it?",
-                  "Is this the right problem?",
-                  "How do you get real users?",
-                  "What breaks when traffic hits?",
+                  "Where's the highest ROI use case?",
+                  "Which AI tools actually fit our stack?",
+                  "How do we go from POC to production?",
+                  "Who owns AI strategy across the company?",
+                  "How do we get the team AI-ready?",
                 ].map((item) => (
                   <p
                     key={item}
@@ -95,7 +97,7 @@ export default function HomeClient() {
               </div>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-editorial">
-                Speed was the right move. Now it needs structure.
+                Experimentation was the right move. Now it needs strategy and execution.
               </p>
 
               <div>
@@ -104,7 +106,7 @@ export default function HomeClient() {
                   onClick={(event) => dialog.open(event.currentTarget)}
                   className="px-6 py-3 border border-border text-sm font-medium rounded-md hover:bg-foreground hover:text-background hover:border-foreground active:bg-[#333333] active:text-background transition-all duration-200"
                 >
-                  Request a Product Review
+                  Start a Conversation
                 </button>
               </div>
             </div>
@@ -118,38 +120,38 @@ export default function HomeClient() {
           <div className="md:col-span-4">
             <p className="text-sm font-mono uppercase tracking-wider text-muted-foreground mb-8">The Reality</p>
             <h3 className="text-[clamp(2rem,3.2vw,3.3rem)] font-medium leading-snug-editorial max-w-md">
-              Shipping is easy. Adoption and scale are not.
+              Most companies have an AI opinion. Few have a strategy.
             </h3>
           </div>
           <div className="md:col-span-8 md:pt-14">
             <div className="space-y-10">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-editorial">
-                You can build a prototype in a weekend now. That part is not the problem.
+                As the cost of intelligence approaches zero, the gap between AI-absent and AI-native is widening fast.
               </p>
 
               <p className="text-[clamp(1.5rem,2.2vw,2.4rem)] leading-[1.08] tracking-tight-editorial font-medium max-w-3xl">
-                The problem is what happens next.
+                The risk isn&apos;t using AI badly. It&apos;s not using it at all.
               </p>
 
               <div className="space-y-4 max-w-3xl">
                 <div className="grid grid-cols-[28px_1fr] gap-4 border-b border-border pb-4">
                   <span className="font-mono text-xs text-muted-foreground mt-1">01</span>
-                  <p className="text-lg leading-relaxed">Maybe the product is fragile.</p>
+                  <p className="text-lg leading-relaxed">No one owns AI strategy across the company.</p>
                 </div>
                 <div className="grid grid-cols-[28px_1fr] gap-4 border-b border-border pb-4">
                   <span className="font-mono text-xs text-muted-foreground mt-1">02</span>
-                  <p className="text-lg leading-relaxed">Maybe users are not sticking.</p>
+                  <p className="text-lg leading-relaxed">AI pilots keep failing to reach production.</p>
                 </div>
                 <div className="grid grid-cols-[28px_1fr] gap-4 border-b border-border pb-4">
                   <span className="font-mono text-xs text-muted-foreground mt-1">03</span>
                   <p className="text-lg leading-relaxed">
-                    Maybe you are not sure what to build, cut, or rebuild.
+                    Teams are resistant without a clear adoption path.
                   </p>
                 </div>
               </div>
 
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-editorial">
-                TwinB turns fast built products into scalable systems and engineers the growth systems that make them matter.
+                TwinB engineers the shift — from AI-scattered to AI-native, with no 200-slide decks and no consultants who can&apos;t ship.
               </p>
             </div>
           </div>
@@ -161,24 +163,18 @@ export default function HomeClient() {
         <div className="mb-16">
           <h2 className="text-[clamp(2rem,3.2vw,3.25rem)] leading-snug-editorial font-medium mb-4">Our Practice</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <EditorialCard
-            title="Product Engineering"
-            description="Refactoring, performance optimization, and architectural stability. We pay down debt so you can move fast again."
-            href="/product"
+            title="AI Engineering"
+            description="Outcome-based engineering squads that leverage AI acceleration to ship production-grade software faster and more affordably. You pay for features delivered, not hours logged."
+            href="/ai-engineering"
             meta="01"
           />
           <EditorialCard
-            title="Growth Engineering"
-            description="Conversion loops, analytics infrastructure, and lifecycle automation. We build the systems that drive revenue."
-            href="/growth"
+            title="AI Transformation"
+            description="From AI-scattered to AI-native. We architect the strategy, process, people, and tooling transformation for companies ready to compete on intelligence."
+            href="/ai-transformation"
             meta="02"
-          />
-          <EditorialCard
-            title="Brand Systems"
-            description="Design systems and asset libraries that ensure consistency as you scale. Not just a logo, but a language."
-            href="/growth#brand-assets"
-            meta="03"
           />
         </div>
       </Section>
@@ -221,7 +217,7 @@ export default function HomeClient() {
           <div className="md:col-span-4">
             <h2 className="text-3xl font-medium mb-4">How we work</h2>
             <p className="text-muted-foreground mb-8">
-              A systematic approach to fixing and scaling. No black boxes.
+              A systematic approach to AI engineering and transformation. No black boxes.
             </p>
             <Link href="/process" className="text-sm font-medium underline underline-offset-4 hover:text-muted-foreground">
               Read full process
@@ -230,11 +226,11 @@ export default function HomeClient() {
           <div className="md:col-span-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-8">
               {[
-                { step: "01", title: "Audit & Diagnostics", desc: "We look under the hood at code, data, and metrics." },
-                { step: "02", title: "Triage & Roadmap", desc: "We prioritize high-impact fixes and structural changes." },
-                { step: "03", title: "Stabilize", desc: "We stop the bleeding and fix critical technical debt." },
-                { step: "04", title: "Scale", desc: "We implement growth systems and performance improvements." },
-                { step: "05", title: "Handover", desc: "We train your team to maintain the new standard." },
+                { step: "01", title: "Discover & Audit", desc: "We map workflows, quantify ROI, and surface your highest-impact AI use cases." },
+                { step: "02", title: "Strategy & Roadmap", desc: "We define what to build, automate, and defer — with clear milestones." },
+                { step: "03", title: "Build & Deploy", desc: "Engineering pods ship AI features to production on two-week sprints." },
+                { step: "04", title: "Enable & Train", desc: "We upskill your team and build the AI-first culture that sustains the shift." },
+                { step: "05", title: "Measure & Optimize", desc: "We track adoption and ROI, then iterate. AI transformation is continuous." },
               ].map((item) => (
                 <div key={item.step} className="border-t border-border pt-4">
                   <span className="font-mono text-xs text-muted-foreground block mb-2">{item.step}</span>
@@ -247,13 +243,17 @@ export default function HomeClient() {
         </div>
       </Section>
 
-      <CTA />
+      <CTA
+        title="Win the next decade."
+        description="Disrupt yourself before your competitors do it for you."
+        buttonText="Start a Conversation"
+        onOpen={(trigger) => dialog.open(trigger)}
+      />
 
       <ServicePanel
         isOpen={dialog.isOpen}
         onClose={dialog.close}
         dialogRef={dialog.dialogRef}
-        variant="productReview"
         prefersReducedMotion={dialog.prefersReducedMotion}
       />
     </>

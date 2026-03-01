@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
-import ProductClient from "./ProductClient";
-
-export const metadata: Metadata = {
-  title: "Product Engineering",
-  description: "From technical debt to technical asset. We rebuild foundations without stopping the business — refactoring, performance, and stability for scaling teams.",
-};
+import { redirect } from "next/navigation";
 
 export default function ProductPage() {
-  return <ProductClient />;
+  redirect("/ai-engineering");
 }

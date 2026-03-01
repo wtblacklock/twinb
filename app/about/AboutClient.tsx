@@ -17,7 +17,7 @@ export default function AboutClient() {
           </div>
           <div className="md:col-span-9">
             <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight">
-              Where scale begins
+              Built for the AI era
             </h1>
           </div>
         </div>
@@ -33,31 +33,31 @@ export default function AboutClient() {
           <div className="md:col-span-9 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="space-y-10">
               <h2 className="text-[clamp(2.2rem,3.6vw,4rem)] leading-[1.02] tracking-tight-editorial font-medium max-w-4xl">
-                Product &amp; Growth Engineering, built by operators.
+                AI Engineering &amp; Transformation, built by operators.
               </h2>
               <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Today it is easy to ship something.
+                  Today it is easy to experiment with AI.
                   <br />
                   <br />
-                  It is hard to make it durable, adopted, and commercially viable.
+                  It is hard to make it production-grade, adopted, and commercially viable.
                   <br />
                 </p>
                 <p>
-                  We work at the intersection of product structure, design clarity, and growth systems. We step in
-                  after the prototype and before scale breaks.
+                  We work at the intersection of AI strategy, engineering execution, and organizational change. We step
+                  in before the AI opportunity passes and after the pilots have stalled.
                   <br />
-                  We fix what is fragile and engineer what comes next.
+                  We build what actually ships and transform what actually sticks.
                 </p>
               </div>
             </div>
             <div className="space-y-5 lg:self-start">
               <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Principles</p>
               <ul className="space-y-3 text-lg leading-relaxed">
-                <li>Product and marketing are one system.</li>
-                <li>Architecture must support adoption.</li>
-                <li>Speed matters. Structure matters more.</li>
-                <li>We reduce fragility before we add features.</li>
+                <li>Strategy without execution is just a slide deck.</li>
+                <li>The best AI tool is the one your team actually uses.</li>
+                <li>Production is the only proof of concept that matters.</li>
+                <li>ROI is the only AI metric worth tracking.</li>
               </ul>
             </div>
           </div>
@@ -74,8 +74,9 @@ export default function AboutClient() {
               className="leading-[1.15] tracking-tight-editorial font-medium max-w-none"
               style={{ fontSize: "clamp(1.8rem, 3.2vw, 3.8rem)" }}
             >
-              <span className="block">Speed got you here.</span>
-              <span className="block">Structure gets you further.</span>
+              <span className="block">The companies that win</span>
+              <span className="block">won&apos;t have the best AI tools.</span>
+              <span className="block">They&apos;ll be restructured around them.</span>
             </blockquote>
           </div>
         </div>
@@ -94,28 +95,28 @@ export default function AboutClient() {
                 enterprise execution.
                 <br />
                 <br />
-                With an MBA and experience managing complex initiatives, he brings structural rigor to fast-built
-                products.
+                With an MBA and experience managing complex initiatives, he brings structural rigor to AI transformation
+                engagements.
                 <br />
                 <br />
-                He focuses on operational alignment, process design, system hardening, and roadmap prioritization so
-                early builds become sustainable platforms.
+                He focuses on operational alignment, process design, change management, and roadmap prioritization so
+                AI initiatives reach production and generate measurable ROI.
               </p>
             </article>
 
             <article className="border border-border p-8 md:p-10">
               <h3 className="text-2xl md:text-3xl font-medium mb-6">William Blacklock</h3>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                William is a product and brand operator with deep experience across design, product strategy, and
-                growth execution.
+                William is a product and AI engineering operator with deep experience across design, product strategy, and
+                engineering execution.
                 <br />
                 <br />
-                He has led creative and product initiatives inside enterprise organizations and startups, built consumer
-                brands, launched digital products, and developed automation systems that connect product to revenue.
+                He has led technical and product initiatives inside enterprise organizations and startups, shipped AI features
+                to production, and built automation systems that connect strategy to revenue.
                 <br />
                 <br />
-                His focus is clarity and cohesion. Messaging must reflect the product, and the product must support
-                growth.
+                His focus is shipping. Strategy must translate to production-grade code, and every AI initiative must
+                support measurable business outcomes.
               </p>
             </article>
           </div>
@@ -129,27 +130,27 @@ export default function AboutClient() {
           </div>
           <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Prototype to Production</h3>
+              <h3 className="text-xl font-medium mb-3">AI to Production</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We turn fast builds into systems ready for real usage.
+                We take AI use cases from concept to production-grade systems that generate real ROI.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Adoption Built In</h3>
+              <h3 className="text-xl font-medium mb-3">Outcome-Based Delivery</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We engineer positioning and growth systems alongside the product.
+                Story-point pricing aligned to features, not hours. No surprise invoices.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Design Taste, Engineering Rigor</h3>
+              <h3 className="text-xl font-medium mb-3">Strategy + Execution</h3>
               <p className="text-muted-foreground leading-relaxed">
-                High craft without fragile foundations.
+                We don&apos;t hand you a deck and disappear. We architect the plan and build the thing.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Operators, Not Spectators</h3>
+              <h3 className="text-xl font-medium mb-3">Operators, Not Consultants</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We build, run, and improve our own products too.
+                We build, run, and improve AI systems in production ourselves.
               </p>
             </article>
           </div>
@@ -160,7 +161,7 @@ export default function AboutClient() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
             <h2 className="text-[clamp(2rem,3.2vw,3.4rem)] leading-tight-editorial font-medium lg:max-w-[80%]">
-              Want a clear plan for what you built?
+              Ready to architect your AI transformation?
             </h2>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 md:justify-end">
@@ -169,7 +170,7 @@ export default function AboutClient() {
               onClick={(event) => dialog.open(event.currentTarget)}
               className="px-6 py-3 bg-foreground text-background text-sm font-medium rounded-md hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
             >
-              Request a Product Review
+              Start a Conversation
             </button>
             <Link
               href="/contact"
@@ -185,7 +186,6 @@ export default function AboutClient() {
         isOpen={dialog.isOpen}
         onClose={dialog.close}
         dialogRef={dialog.dialogRef}
-        variant="productReview"
         prefersReducedMotion={dialog.prefersReducedMotion}
       />
     </>
