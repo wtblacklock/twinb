@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { CTA } from "@/components/CTA";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { workItems } from "@/lib/work-items";
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = workItems.find((w) => w.href === `/work/${params.slug}`);
+  return {
+    title: item?.client ?? "Case Study",
+    description: item
+      ? `${item.title} — ${item.scope}`
+      : "A case study from TwinB.",
+  };
+}
 
 export default function WorkDetailPage({ params }: { params: { slug: string } }) {
   // In a real app, fetch data based on params.slug
@@ -60,7 +72,7 @@ export default function WorkDetailPage({ params }: { params: { slug: string } })
             <p className="text-xl leading-relaxed mb-8">
               [Detailed narrative of the engagement would go here. It would cover the initial audit findings, the strategic roadmap, and the technical implementation details.]
             </p>
-            
+
             <h3 className="text-2xl font-medium mt-12 mb-6">Technical Deep Dive</h3>
             <p className="mb-6 text-muted-foreground">
               We identified that the primary bottleneck was a locked database table during write-heavy operations. By implementing a read-replica strategy and optimizing the indexing, we alleviated the pressure.

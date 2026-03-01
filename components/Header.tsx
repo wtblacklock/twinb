@@ -128,10 +128,7 @@ export function Header() {
                             Capabilities
                           </h4>
                           <ul className="space-y-2">
-                            {(item.title === "Product"
-                              ? navConfig.productAnchors
-                              : navConfig.growthAnchors
-                            ).map((anchor) => (
+                            {(item.type === "mega" ? item.anchors : []).map((anchor) => (
                               <li key={anchor.id}>
                                 <Link
                                   href={`${item.href}#${anchor.id}`}
@@ -147,12 +144,10 @@ export function Header() {
                         </div>
                         <div className="bg-muted/30 p-4 rounded-lg">
                           <h4 className="font-medium mb-2">
-                            {item.title === "Product" ? "Engineering Excellence" : "Growth Systems"}
+                            {item.type === "mega" ? item.megaLabel : ""}
                           </h4>
                           <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                            {item.title === "Product"
-                              ? "From technical debt to technical asset. We rebuild foundations."
-                              : "Data-driven loops that compound. We build engines for scale."}
+                            {item.type === "mega" ? item.megaDescription : ""}
                           </p>
                           <Link
                             href={item.href}
@@ -175,7 +170,7 @@ export function Header() {
               onClick={(event) => dialog.open(event.currentTarget)}
               className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
             >
-              Request a Product Review
+              Start a Conversation
             </button>
           </div>
 
@@ -236,10 +231,7 @@ export function Header() {
                         {item.title}
                       </Link>
                       <ul className="pl-4 space-y-3 border-l border-border ml-1">
-                        {(item.title === "Product"
-                          ? navConfig.productAnchors
-                          : navConfig.growthAnchors
-                        ).map((anchor) => (
+                        {(item.type === "mega" ? item.anchors : []).map((anchor) => (
                           <li key={anchor.id}>
                             <Link
                               href={`${item.href}#${anchor.id}`}
@@ -273,7 +265,7 @@ export function Header() {
                     dialog.open(event.currentTarget);
                   }}
                 >
-                  Request a Product Review
+                  Start a Conversation
                 </button>
               </div>
             </nav>
@@ -286,7 +278,6 @@ export function Header() {
         isOpen={dialog.isOpen}
         onClose={dialog.close}
         dialogRef={dialog.dialogRef}
-        variant="productReview"
         prefersReducedMotion={dialog.prefersReducedMotion}
       />
     </>

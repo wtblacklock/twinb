@@ -1,11 +1,21 @@
+import type { Metadata } from "next";
 import { Section } from "@/components/Section";
 import { CTA } from "@/components/CTA";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { articles } from "@/lib/insights";
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const article = articles.find((a) => a.slug === params.slug);
+  return {
+    title: article?.title ?? "Insight",
+    description: article?.excerpt ?? "AI engineering and transformation perspectives from TwinB.",
+  };
+}
 
 export default function InsightDetailPage({ params }: { params: { slug: string } }) {
-  // Mock data lookup
-  const title = params.slug.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
+  const article = articles.find((a) => a.slug === params.slug);
+  const title = article?.title ?? params.slug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
 
   return (
     <>
@@ -15,13 +25,13 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
         </Link>
         <div className="max-w-4xl mx-auto text-center">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
-            Engineering
+            {article?.category ?? "Engineering"}
           </span>
           <h1 className="text-[clamp(2.5rem,4vw,4rem)] leading-tight-editorial font-medium tracking-tight mb-8">
             {title}
           </h1>
           <p className="text-sm text-muted-foreground">
-            Published on Oct 12, 2024 • 5 min read
+            {article ? `Published on ${article.date} • 5 min read` : "Published on Oct 12, 2024 • 5 min read"}
           </p>
         </div>
       </Section>
@@ -32,7 +42,7 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
             <p className="text-xl leading-relaxed mb-8 font-medium text-foreground/80">
               [Lead paragraph summarizing the core argument of the article. It should be punchy and provocative.]
             </p>
-            
+
             <p>
               [Body content placeholder. This would be a deep dive into the topic, likely discussing the trade-offs between speed and quality, and how technical debt accumulates over time.]
             </p>
@@ -50,7 +60,7 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
             <p>
               [Actionable advice on how to address the problem.]
             </p>
-            
+
             <ul>
               <li>Audit your dependencies</li>
               <li>Refactor critical paths</li>
@@ -60,7 +70,7 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
         </div>
       </Section>
 
-      <CTA title="Subscribe to our newsletter" description="Get engineering and growth insights delivered to your inbox." buttonText="Subscribe" />
+      <CTA title="Subscribe to our newsletter" description="Get AI engineering and transformation perspectives delivered to your inbox." buttonText="Subscribe" />
     </>
   );
 }
