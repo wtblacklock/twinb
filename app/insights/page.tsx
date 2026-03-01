@@ -7,7 +7,7 @@ import { articles } from "@/lib/insights";
 
 export const metadata: Metadata = {
   title: "Insights",
-  description: "Thoughts on engineering, growth, and the systems that connect them.",
+  description: "Perspectives on AI engineering, transformation, and the systems that connect them.",
 };
 
 export default function InsightsPage() {
@@ -19,7 +19,7 @@ export default function InsightsPage() {
             Insights
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            Thoughts on engineering, growth, and the systems that connect them.
+            Perspectives on AI engineering, transformation, and the systems that connect them.
           </p>
         </div>
       </Section>

@@ -19,17 +19,15 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-[240px]">
-              We turn fast built products into scalable systems. Product & Growth Engineering for the long haul.
+              Outcome-based AI engineering and transformation for companies ready to compete on intelligence.
             </p>
           </div>
           
           <div>
             <h4 className="font-mono text-xs uppercase tracking-wider mb-6 text-foreground/50">Practice</h4>
             <ul className="space-y-3">
-              <li><Link href="/product" className="text-sm hover:text-muted-foreground transition-colors">Product Engineering</Link></li>
-              <li><Link href="/growth" className="text-sm hover:text-muted-foreground transition-colors">Growth Engineering</Link></li>
-              <li><Link href="/process" className="text-sm hover:text-muted-foreground transition-colors">Our Process</Link></li>
-              <li><Link href="/work" className="text-sm hover:text-muted-foreground transition-colors">Selected Work</Link></li>
+              <li><Link href="/ai-engineering" className="text-sm hover:text-muted-foreground transition-colors">AI Engineering</Link></li>
+              <li><Link href="/ai-transformation" className="text-sm hover:text-muted-foreground transition-colors">AI Transformation</Link></li>
             </ul>
           </div>
 
@@ -37,7 +35,6 @@ export function Footer() {
             <h4 className="font-mono text-xs uppercase tracking-wider mb-6 text-foreground/50">Company</h4>
             <ul className="space-y-3">
               <li><Link href="/about" className="text-sm hover:text-muted-foreground transition-colors">About Us</Link></li>
-              <li><Link href="/insights" className="text-sm hover:text-muted-foreground transition-colors">Insights</Link></li>
               <li><Link href="/contact" className="text-sm hover:text-muted-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -47,7 +44,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href="#" className="text-sm hover:text-muted-foreground transition-colors">LinkedIn</a></li>
               <li><a href="#" className="text-sm hover:text-muted-foreground transition-colors">Twitter / X</a></li>
-              <li><a href="mailto:hello@twinb.com" className="text-sm hover:text-muted-foreground transition-colors">hello@twinb.com</a></li>
+              <li><a href="mailto:hello@twinb.me" className="text-sm hover:text-muted-foreground transition-colors">hello@twinb.me</a></li>
             </ul>
           </div>
         </div>

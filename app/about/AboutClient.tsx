@@ -17,7 +17,7 @@ export default function AboutClient() {
           </div>
           <div className="md:col-span-9">
             <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight">
-              Built for the AI era
+              AI engineering and transformation, done by people who&apos;ve shipped it themselves.
             </h1>
           </div>
         </div>
@@ -32,32 +32,28 @@ export default function AboutClient() {
           </div>
           <div className="md:col-span-9 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="space-y-10">
-              <h2 className="text-[clamp(2.2rem,3.6vw,4rem)] leading-[1.02] tracking-tight-editorial font-medium max-w-4xl">
+              <h2 className="text-[clamp(1.6rem,2.4vw,2.8rem)] leading-[1.08] tracking-tight-editorial font-medium max-w-4xl">
                 AI Engineering &amp; Transformation, built by operators.
               </h2>
               <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Today it is easy to experiment with AI.
-                  <br />
-                  <br />
-                  It is hard to make it production-grade, adopted, and commercially viable.
-                  <br />
+                  The AI shift isn&apos;t coming. It&apos;s here. The question isn&apos;t whether to move — it&apos;s whether you move fast enough to matter.
                 </p>
                 <p>
-                  We work at the intersection of AI strategy, engineering execution, and organizational change. We step
-                  in before the AI opportunity passes and after the pilots have stalled.
-                  <br />
-                  We build what actually ships and transform what actually sticks.
+                  Most companies know they need to change. Few have the engineering depth, organizational alignment, or outside perspective to actually pull it off. That&apos;s the gap we close.
+                </p>
+                <p>
+                  We build AI systems that reach production. We transform organizations in ways that stick. No decks without delivery. No strategy without execution.
                 </p>
               </div>
             </div>
             <div className="space-y-5 lg:self-start">
               <p className="text-sm font-medium uppercase tracking-wide text-muted-foreground">Principles</p>
               <ul className="space-y-3 text-lg leading-relaxed">
-                <li>Strategy without execution is just a slide deck.</li>
-                <li>The best AI tool is the one your team actually uses.</li>
-                <li>Production is the only proof of concept that matters.</li>
-                <li>ROI is the only AI metric worth tracking.</li>
+                <li>AI is a platform shift, not a feature. Companies treating it like a productivity tool are already behind.</li>
+                <li>Every business will land in one of three positions: AI-absent, AI-integrated, or AI-native. Only one is a winning long-term strategy.</li>
+                <li>Becoming AI-native isn&apos;t a side project. It&apos;s the most important strategic initiative you&apos;ll run this decade.</li>
+                <li>Building real AI systems requires depth most companies don&apos;t have in-house — and can&apos;t hire fast enough to get.</li>
               </ul>
             </div>
           </div>
@@ -74,9 +70,9 @@ export default function AboutClient() {
               className="leading-[1.15] tracking-tight-editorial font-medium max-w-none"
               style={{ fontSize: "clamp(1.8rem, 3.2vw, 3.8rem)" }}
             >
-              <span className="block">The companies that win</span>
-              <span className="block">won&apos;t have the best AI tools.</span>
-              <span className="block">They&apos;ll be restructured around them.</span>
+              <span className="block">The companies falling behind</span>
+              <span className="block">on AI aren&apos;t short on opinions.</span>
+              <span className="block">They&apos;re short on execution.</span>
             </blockquote>
           </div>
         </div>
@@ -130,27 +126,27 @@ export default function AboutClient() {
           </div>
           <div className="md:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-6">
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">AI to Production</h3>
+              <h3 className="text-xl font-medium mb-3">No plan without a builder</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We take AI use cases from concept to production-grade systems that generate real ROI.
+                The people who advise are the people who build. We don&apos;t separate strategy from engineering — they happen in the same room.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Outcome-Based Delivery</h3>
+              <h3 className="text-xl font-medium mb-3">Time-boxed, not open-ended</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Story-point pricing aligned to features, not hours. No surprise invoices.
+                Sprints, not subscriptions. You know exactly what you&apos;re paying for before we start — and what you&apos;ll have when we finish.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Strategy + Execution</h3>
+              <h3 className="text-xl font-medium mb-3">Depth over breadth</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We don&apos;t hand you a deck and disappear. We architect the plan and build the thing.
+                We don&apos;t spread thin across dozens of clients. Your engagement gets focused attention from people who care about the outcome.
               </p>
             </article>
             <article className="border border-border p-6">
-              <h3 className="text-xl font-medium mb-3">Operators, Not Consultants</h3>
+              <h3 className="text-xl font-medium mb-3">Accountable to results</h3>
               <p className="text-muted-foreground leading-relaxed">
-                We build, run, and improve AI systems in production ourselves.
+                Story-point pricing on engineering. ROI milestones on transformation. We don&apos;t invoice for effort — we invoice for output.
               </p>
             </article>
           </div>
@@ -161,7 +157,7 @@ export default function AboutClient() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
             <h2 className="text-[clamp(2rem,3.2vw,3.4rem)] leading-tight-editorial font-medium lg:max-w-[80%]">
-              Ready to architect your AI transformation?
+              Ready to stop piloting and start shipping?
             </h2>
           </div>
           <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 md:justify-end">

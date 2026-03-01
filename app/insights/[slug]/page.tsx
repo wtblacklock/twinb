@@ -9,7 +9,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const article = articles.find((a) => a.slug === params.slug);
   return {
     title: article?.title ?? "Insight",
-    description: article?.excerpt ?? "Engineering and growth insights from TwinB.",
+    description: article?.excerpt ?? "AI engineering and transformation perspectives from TwinB.",
   };
 }
 
@@ -70,7 +70,7 @@ export default function InsightDetailPage({ params }: { params: { slug: string }
         </div>
       </Section>
 
-      <CTA title="Subscribe to our newsletter" description="Get engineering and growth insights delivered to your inbox." buttonText="Subscribe" />
+      <CTA title="Subscribe to our newsletter" description="Get AI engineering and transformation perspectives delivered to your inbox." buttonText="Subscribe" />
     </>
   );
 }

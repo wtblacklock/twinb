@@ -1,61 +1,85 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Section } from "@/components/Section";
 import { CTA } from "@/components/CTA";
 import { navConfig } from "@/config/nav";
-import { EditorialCard } from "@/components/EditorialCard";
 import { SectionCTA } from "@/components/SectionCTA";
 import { ServicePanel } from "@/components/ServicePanel";
-import { WhenToCallUs } from "@/components/WhenToCallUs";
-import { JumpNav } from "@/components/JumpNav";
 import { useDialog } from "@/hooks/useDialog";
 
-const engineeringContent: Record<string, string> = {
-  fullstack:
-    "Full-stack AI-first development from web apps to internal tools. We build production-grade software with modern stacks and AI acceleration baked in from day one.",
-  finetuning:
-    "We fine-tune open and closed models on your proprietary data. The result: domain-specific AI that outperforms generic models on the tasks that matter to your business.",
-  migration:
-    "Legacy codebases drag on velocity. We migrate, refactor, and modernize your core systems — and integrate AI tooling into the new architecture.",
-  data:
-    "Good AI needs good data. We design and build the pipelines, warehouses, and analysis layers that make AI features reliable and insights actionable.",
-  agentic:
-    "We build multi-agent systems that automate complex workflows end-to-end. From research agents to autonomous dispatch, we engineer AI that operates without hand-holding.",
-  delivery:
-    "Outcome-based, story-point pricing. Two-week sprints. Dedicated Technical Product Manager. You control prioritization — we control quality and velocity.",
-};
-
-const engineeringCapabilities: Record<string, string[]> = {
-  fullstack: ["React / Next.js", "Node.js / Python", "AI Feature Integration"],
-  finetuning: ["LoRA / QLoRA Fine-Tuning", "RLHF & Preference Data", "Evaluation Pipelines"],
-  migration: ["Legacy Modernization", "AI Tooling Integration", "Test Coverage Uplift"],
-  data: ["Pipeline Architecture", "Vector Stores & RAG", "Analytics Dashboards"],
-  agentic: ["Multi-Agent Orchestration", "Tool & API Integration", "Autonomous Workflows"],
-  delivery: ["Story-Point Pricing", "Two-Week Sprints", "Dedicated TPM"],
-};
-
-const whenToCallUs = [
+const beliefs = [
   {
-    label: "Velocity",
-    items: [
-      "You need to ship AI features but your team isn't AI-native yet.",
-      "You're spending on engineers but not getting AI-accelerated output.",
-    ],
+    title: "Small teams, elite engineers",
+    body: "We don't pad headcount. One sharp engineer outproduces a roster of average ones — so we hire differently, pay accordingly, and keep the team tight.",
   },
   {
-    label: "Quality",
-    items: [
-      "Your AI prototypes work in demos but fail in production.",
-      "Fine-tuned models underperform on domain-specific tasks.",
-    ],
+    title: "AI-accelerated by default",
+    body: "Every engineer on our team uses AI tooling every day. Not as a gimmick — as a multiplier. It's how we stay faster and more affordable than building in-house.",
   },
   {
-    label: "Ownership",
-    items: [
-      "You need a dedicated AI engineering team without full-time hiring risk.",
-      "You want outcome-based pricing, not billable hours.",
-    ],
+    title: "You pay for what ships",
+    body: "We price on story-points, not hours. You know exactly what you're getting before a line of code is written. No billing surprises, no scope drift.",
+  },
+  {
+    title: "Our incentives match yours",
+    body: "Our team earns based on what they deliver — not time on the clock. When you win, we win. That's not a tagline, it's the contract.",
+  },
+];
+
+const whyYouNeedUs = [
+  "The best engineers aren't looking — and even if they were, hiring takes months.",
+  "Senior engineering talent costs more than it ever has, and the bar keeps rising.",
+  "In fast-moving markets, shipping speed is a strategic advantage, not a nice-to-have.",
+  "Technical debt and bad habits compound. Outside execution breaks the cycle.",
+];
+
+const capabilityContent: Record<string, { body: string }> = {
+  fullstack: {
+    body: "Full-stack software built AI-first. From APIs to UI, we ship production-grade apps with AI baked in, not bolted on.",
+  },
+  finetuning: {
+    body: "Most teams still run a software development lifecycle in an AI world. We help you make the shift — new loops, new tooling, new ways of shipping.",
+  },
+  migration: {
+    body: "We modernize codebases — language upgrades, version migrations, structural rewrites. Clean architecture you can actually build on.",
+  },
+  data: {
+    body: "AI without good data is guesswork. We build the pipelines, clean the data, and wire up the infrastructure your models need to perform.",
+  },
+  agentic: {
+    body: "We build agents that do real work — research, dispatch, automation, orchestration. Not chatbots. Actual AI systems.",
+  },
+};
+
+const deliveryDetails = [
+  {
+    label: "Dedicated Team",
+    desc: "A Technical Product Manager and engineers assigned to you — not a rotating cast of whoever's available.",
+  },
+  {
+    label: "Sprint Cycles",
+    desc: "Two-week sprints, every time. You pick priorities, we execute. Predictable rhythm, no surprises.",
+  },
+  {
+    label: "Project Management",
+    desc: "We plug into Jira, Linear, or Trello — whichever you already use. Zero onboarding overhead.",
+  },
+  {
+    label: "Regular Check-ins",
+    desc: "Structured syncs and async updates built in. You always know what's shipping and what's next.",
+  },
+  {
+    label: "24-Hour Ticket Assessment",
+    desc: "Submit a ticket, get a scope and story-point estimate within 24 hours. Never flying blind on cost.",
+  },
+  {
+    label: "Story-Point Commitment",
+    desc: "We commit to output, not effort. If it didn't ship, you didn't pay for it.",
+  },
+  {
+    label: "Shared Slack Channel",
+    desc: "Your squad in your Slack. No ticketing systems between you and the people doing the work.",
   },
 ];
 
@@ -63,13 +87,9 @@ export default function AIEngineeringClient() {
   const dialog = useDialog();
   const engineeringItem = navConfig.mainNav.find((item) => item.href === "/ai-engineering");
   const jumpSections = engineeringItem?.type === "mega" ? engineeringItem.anchors : [];
-  const [panelService, setPanelService] = useState({
-    id: jumpSections[0]?.id ?? "fullstack",
-    label: jumpSections[0]?.label ?? "Application Development",
-  });
+  const capabilitySections = jumpSections.filter((s) => s.id !== "delivery");
 
-  const openPanel = (serviceId: string, serviceLabel: string, trigger: HTMLElement) => {
-    setPanelService({ id: serviceId, label: serviceLabel });
+  const openPanel = (_serviceId: string, _serviceLabel: string, trigger: HTMLElement) => {
     dialog.open(trigger);
   };
 
@@ -93,127 +113,143 @@ export default function AIEngineeringClient() {
 
   return (
     <>
+      {/* Hero */}
       <Section id="top" className="pt-48 md:pt-[150px] lg:pt-[160px] pb-16">
         <div className="max-w-4xl">
           <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-6 block">
             AI Engineering
           </span>
           <h1 className="text-[clamp(3rem,5vw,5rem)] leading-tight-editorial font-medium tracking-tight mb-8 lg:max-w-[90%]">
-            High-velocity AI engineering. You pay for features delivered, not hours logged.
+            AI engineering that ships. Not decks, not demos — software.
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-            Outcome-based engineering squads that leverage AI acceleration to ship production-grade software faster and more affordably.
+            Outcome-based squads who use AI to build AI. You pay for features in production, not hours in Zoom.
           </p>
         </div>
       </Section>
 
-      <Section id="how-we-work" className="pt-0 pb-16 md:border-b md:border-border">
+      {/* What We Believe */}
+      <Section className="pt-0 pb-20 md:border-b md:border-border">
+        <div className="mb-12">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-4">What we believe</p>
+          <h2 className="text-[clamp(2rem,3.2vw,3.25rem)] leading-snug-editorial font-medium max-w-2xl">
+            The way we work is the product.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-border">
+          {beliefs.map((belief) => (
+            <div key={belief.title} className="bg-background p-8 md:p-10">
+              <h3 className="text-lg font-medium mb-3">{belief.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{belief.body}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Why You Need Us */}
+      <Section className="py-20 md:border-b md:border-border">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
-            <h2 className="text-3xl md:text-4xl font-medium leading-snug-editorial">
-              One world-class engineer beats ten mediocre ones.
+            <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-4">Why you need us</p>
+            <h2 className="text-[clamp(2rem,3.2vw,3.25rem)] leading-snug-editorial font-medium">
+              Building a great engineering team has never been harder.
             </h2>
           </div>
-          <div className="md:col-span-8">
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-editorial">
-              We hire the best, use AI aggressively, and charge on outcomes. Our squads deliver more in two weeks than most teams ship in a quarter.
-            </p>
-            <ul className="mt-8 space-y-3 text-muted-foreground">
-              <li>Story-point based pricing — you pay for features, not hours</li>
-              <li>Two-week sprint cycles with full prioritization control</li>
-              <li>Dedicated Technical Product Manager on every engagement</li>
-              <li>Shared Slack channel and 24-hour ticket turnaround</li>
-              <li>Compatible with Jira, Linear, and Trello</li>
-            </ul>
+          <div className="md:col-span-8 md:pt-12">
+            <div className="space-y-0">
+              {whyYouNeedUs.map((point, i) => (
+                <div key={i} className="grid grid-cols-[28px_1fr] gap-4 border-b border-border py-5 last:border-0">
+                  <span className="font-mono text-xs text-muted-foreground mt-1">0{i + 1}</span>
+                  <p className="text-lg leading-relaxed">{point}</p>
+                </div>
+              ))}
+            </div>
             <SectionCTA
-              className="mt-8"
-              onOpen={(trigger) => openPanel("fullstack", "Application Development", trigger)}
+              className="mt-10"
+              onOpen={(trigger) => openPanel("general", "AI Engineering", trigger)}
             />
           </div>
         </div>
       </Section>
 
-      <JumpNav sections={jumpSections} />
+      {/* What We Do Header */}
+      <Section className="py-20 md:border-b md:border-border">
+        <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-4">What we do</p>
+        <h2 className="text-[clamp(2rem,3.2vw,3.25rem)] leading-snug-editorial font-medium max-w-2xl">
+          The full stack, end to end.
+        </h2>
+      </Section>
 
-      <WhenToCallUs
-        intro="Bring us in when velocity is the constraint — not ideas."
-        columns={whenToCallUs}
-      />
-
+      {/* Capability Sections */}
       <div className="bg-background">
-        {jumpSections.map((anchor, index) => (
-          <Section key={anchor.id} id={anchor.id} className="py-20 md:py-24 md:border-b md:border-border last:border-0">
-            <div className="group/offering grid grid-cols-1 md:grid-cols-12 gap-12">
+        {capabilitySections.map((anchor, index) => (
+          <Section
+            key={anchor.id}
+            id={anchor.id}
+            className="py-20 md:py-24 md:border-b md:border-border last:border-0"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
               <div className="md:col-span-4">
                 <span className="font-mono text-xs text-muted-foreground block mb-2">0{index + 1}</span>
                 <h2
                   id={`${anchor.id}-heading`}
                   tabIndex={-1}
-                  className="scroll-mt-32 md:scroll-mt-36 text-3xl font-medium leading-snug-editorial focus:outline-none"
+                  className="scroll-mt-32 md:scroll-mt-36 text-3xl font-medium leading-snug-editorial focus:outline-none mb-8"
                 >
                   {anchor.label}
                 </h2>
                 <SectionCTA
-                  className="mt-8"
                   onOpen={(trigger) => openPanel(anchor.id, anchor.label, trigger)}
                 />
               </div>
               <div className="md:col-span-8">
-                <p className="text-lg mb-8 max-w-editorial">
-                  {engineeringContent[anchor.id] ??
-                    "We design, build, and deploy production-grade AI systems that operate reliably at scale."}
+                <p className="text-lg max-w-editorial text-muted-foreground leading-relaxed">
+                  {capabilityContent[anchor.id]?.body ?? "We design, build, and deploy AI systems that operate reliably at scale."}
                 </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
-                  <div>
-                    <h4 className="font-medium text-sm mb-4">Capabilities</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      {(engineeringCapabilities[anchor.id] ?? [
-                        "System Design",
-                        "Implementation",
-                        "Production Deployment",
-                      ]).map((item) => (
-                        <li key={`${anchor.id}-${item}`}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-sm mb-4">Typical Deliverables</h4>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>Production-Ready Code</li>
-                      <li>Documentation & Runbooks</li>
-                      <li>Evaluation & Testing Suite</li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
           </Section>
         ))}
       </div>
 
-      <Section className="bg-muted/10">
-        <h2 className="text-3xl font-medium mb-12">Related Work</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <EditorialCard
-            title="Axiom Logistics"
-            description="Multi-agent dispatch automation that eliminated 80% of manual operations."
-            href="/work/axiom-logistics"
-            meta="Logistics"
-          />
-          <EditorialCard
-            title="LexCore"
-            description="Fine-tuned legal AI that reduced document review time by 70%."
-            href="/work/lexcore"
-            meta="Legal AI"
-          />
-          <EditorialCard
-            title="PulseData"
-            description="AI-driven data platform delivering 10x pipeline performance."
-            href="/work/pulsedata"
-            meta="Data Engineering"
-          />
+      {/* + More */}
+      <Section className="py-20 md:py-24 md:border-t md:border-b md:border-border">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+          <div className="md:col-span-4">
+            <span className="font-mono text-xs text-muted-foreground block mb-2">06</span>
+            <h2 className="text-3xl font-medium leading-snug-editorial mb-8">+ More</h2>
+            <SectionCTA
+              onOpen={(trigger) => openPanel("general", "AI Engineering", trigger)}
+            />
+          </div>
+          <div className="md:col-span-8">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-editorial">
+              If it's a software problem, we can solve it. We integrate into your team and your stack without friction.
+            </p>
+          </div>
         </div>
+      </Section>
+
+      {/* Why Work With Us / Delivery Model */}
+      <Section id="delivery" className="py-20 md:py-24 bg-muted/10">
+        <div className="mb-12">
+          <p className="font-mono text-xs uppercase tracking-wider text-muted-foreground mb-4">Why work with us</p>
+          <h2 className="text-[clamp(2rem,3.2vw,3.25rem)] leading-snug-editorial font-medium max-w-2xl">
+            Structured to ship. Every time.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {deliveryDetails.map((item) => (
+            <div key={item.label} className="border-t border-border pt-6">
+              <h3 className="font-medium mb-2">{item.label}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <SectionCTA
+          className="mt-12"
+          onOpen={(trigger) => openPanel("delivery", "Delivery Model", trigger)}
+        />
       </Section>
 
       <Section className="py-10">
@@ -228,8 +264,8 @@ export default function AIEngineeringClient() {
       </Section>
 
       <CTA
-        title="Ship AI features faster."
-        description="Outcome-based engineering. Two-week sprints. No hourly billing."
+        title="Stop waiting on engineering."
+        description="Two-week sprints. Outcome-based pricing. Real engineers."
         onOpen={(trigger) => openPanel("general", "AI Engineering", trigger)}
       />
 
@@ -237,8 +273,6 @@ export default function AIEngineeringClient() {
         isOpen={dialog.isOpen}
         onClose={dialog.close}
         dialogRef={dialog.dialogRef}
-        primaryServiceId={panelService.id}
-        primaryServiceName={panelService.label}
         prefersReducedMotion={dialog.prefersReducedMotion}
       />
     </>

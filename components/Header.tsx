@@ -170,7 +170,7 @@ export function Header() {
               onClick={(event) => dialog.open(event.currentTarget)}
               className="px-5 py-2.5 bg-foreground text-background text-sm font-medium rounded-lg hover:bg-[#333333] active:bg-[#1a1a1a] transition-all duration-200"
             >
-              Request a Product Review
+              Start a Conversation
             </button>
           </div>
 
@@ -265,7 +265,7 @@ export function Header() {
                     dialog.open(event.currentTarget);
                   }}
                 >
-                  Request a Product Review
+                  Start a Conversation
                 </button>
               </div>
             </nav>
@@ -278,7 +278,6 @@ export function Header() {
         isOpen={dialog.isOpen}
         onClose={dialog.close}
         dialogRef={dialog.dialogRef}
-        variant="productReview"
         prefersReducedMotion={dialog.prefersReducedMotion}
       />
     </>
